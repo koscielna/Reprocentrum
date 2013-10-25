@@ -1,9 +1,17 @@
 !!!
 %html
   %head
-    %title Reprocentrum
+    %title Reprocentrum - kopia jak oryginał
+    %meta{ 'http-equiv'=> "Content-Type", 'content'=> "text/html; charset=utf-8" }
     = stylesheet_link_tag "application", media: "all"
+    = stylesheet_link_tag href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    #wrapper-bg
+      #wrapper
+        = render 'shared/top'
+        = render 'shared/header'
+        = render 'shared/menu'
+        = render 'shared/banner'
+        = yield
