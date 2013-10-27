@@ -49,11 +49,16 @@ a img {
 
 .image-full {
   display: block;
-  width: 100px;
-  height: 150px;
   margin: auto;
+  width: 100px;
+  margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .image-left {
@@ -578,3 +583,6 @@ ul.style5 .first {
   color:  #E32088;
 }
 
+.marker {
+  height: 20px;
+}

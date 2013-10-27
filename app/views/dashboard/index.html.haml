@@ -1,1 +1,25 @@
-%h1 Reprocentrum
+#three-column.container
+  .tbox1
+    .content
+      .image.image-full= image_tag 'firma.png', alt: 'doświadczenie'
+      %h2 Wieloletnie doświadczenie
+      %p Aliquam erat volutpat. Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh.
+      %a.button-style{href: '/doswiadczenie'}
+        Dowiedz się więcej
+        = image_tag 'list-marker-blue.png', class: 'marker'
+  .tbox2
+    .content
+      .image.image-full= image_tag 'people.png', alt: 'kadra'
+      %h2 Wykwalifikowana kadra
+      %p Whether you’re a company that wants a batch of business cards or someone who wants a huge banner to embarrass their friend on their 40th birthday we can do that for you.
+      %a.button-style{href: '/kadra'}
+        Dowiedz się więcej
+        = image_tag 'list-marker-magenta.png', class: 'marker'
+  .tbox3
+    .content
+      .image.image-full= image_tag 'lightbulb.jpg', alt: 'kadra'
+      %h2 Druk bez wychodzenia z domu
+      %p Whatever the job we pride ourselves on high quality design and print work using a range of methods from the latest in digital printing to more traditional finishing techniques.
+      %a.button-style{href: '/druk'}
+        Dowiedz się więcej
+        = image_tag 'list-marker-yellow.png', class: 'marker'
