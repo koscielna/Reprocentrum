@@ -7,6 +7,10 @@ Reprocentrum::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'dashboard#index'
 
+  get '/uslugi' => 'services#index'
+  get '/sterowniki' => 'drivers#index'
+  get '/kontakt' => 'contact#index'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
