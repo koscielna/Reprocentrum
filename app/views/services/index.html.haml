@@ -1,6 +1,17 @@
+#services-menu
+  %ul
+    %li= link_to 'Ksero', '#ksero-czarno-biale'
+    %li= link_to 'Wydruki', '#wydruki'
+    %li= link_to 'Składanie', '#skladanie'
+    %li= link_to 'Oprawianie', '#oprawianie'
+    %li= link_to 'Skanowanie', '#skanowanie'
+    %li= link_to 'Aplikacje', '#aplikacje'
+    %li= link_to 'Kalibracja', '#kalibracja'
+    %li= link_to 'Zapis danych', '#zapis-danych'
+
 #services-content
   %h1 Usługi jakie oferujemy
-  .white
+  .white#ksero-czarno-biale
     .service
       %h2 Ksero czarno-białe
       .service-col
@@ -21,13 +32,13 @@
       .warning
         UWAGA: Możliwość przeskalowania do dowolnego formatu.
     = image_tag 'kserokopiarka.jpg', alt: 'ksero'
-  .white
+  .white#ksero-kolorowe
     %h2 Ksero kolorowe
     .service
       %ul
         %li Kolorowe wydruki laserowe A4 - A3
         %li Duży format - wydruk atramentowy max do 1120 [mm]
-  .grayed-out
+  .grayed-out#wydruki
     %h2 Wydruki
     .service
       .service-col
@@ -47,7 +58,7 @@
       .warning
         UWAGA: Wydruki kolorowe kartometryczne, idealne do ZUD-u.
     = image_tag 'ploter.jpg'
-  .white
+  .white#skladanie
     %h2 Składanie
     .service
       %b Składamy dokumentację ręcznie i maszynowo:
@@ -56,7 +67,7 @@
         %li do formatu A4 bez marginesu (do teczki)
         %li do formatu A3
     = image_tag 'skladarka.jpg'
-  .grayed-out
+  .grayed-out#oprawianie
     %h2 Oprawianie
     .service
       %b Oprawiamy profesjonalnie dokumentację techniczną (format oprawy A4, A3)
@@ -67,7 +78,7 @@
         %li segregatory
         %li teczki
     = image_tag 'greenbinder.jpg'
-  .white
+  .white#skanowanie
     %h2 Skanowanie czarno-białe i kolorowe
     .service
       .service-col
@@ -85,7 +96,7 @@
       .warning
       UWAGA: Skany klienta przesyłamy na wskazany adres internetowy. Istnieje możliwość obróbki skanów - czyszczenie tła, kalibracja, etc.
     = image_tag 'skaner.jpg'
-  .grayed-out
+  .grayed-out#aplikacje
     %h2 Aplikacje
     #applications
       = image_tag 'autocad.png', alt: 'AutoCad', class: 'icon'
@@ -104,11 +115,11 @@
           %b CorelDraw
         %li wersja 14
         %li wydruk, edycja
-  .white
+  .white#kalibracja
     %h2 Kalibracja
     .service
       Wykonujemy profesjonalną kalibrację skanów w specjalistycznym programie. Dzięki temu unikniesz problemu z ZUD-em.
-  .white
+  .white#zapis-danych
     %h2 Zapis danych
     .service
       %ul
