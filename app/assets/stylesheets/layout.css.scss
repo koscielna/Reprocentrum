@@ -646,3 +646,21 @@ ul.style5 .first {
   -moz-box-shadow:    0px 1px 26px rgba(50, 50, 50, 0.75);
   box-shadow:         0px 1px 26px rgba(50, 50, 50, 0.75);
 }
+
+.contact-form {
+  .field{
+    input, textarea {
+      width: 100%;
+      font-size: 16px;
+      padding: 6px;
+      border-radius: 5px;
+      border: 1px solid #d5d5d5;
+    }
+
+    input[type=submit] {
+
+    }
+  }
+
+  .msg-button {}
+}

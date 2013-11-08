@@ -1,0 +1,8 @@
+= form_for @message, url: deliver_path, html: {class: 'contact-form'} do |f|
+  .field= f.text_field :full_name, :placeholder => 'Imię i nazwisko', :required => true
+  .field= f.text_field :email, :placeholder => 'E-mail', :required => true
+  .field= f.text_field :topic, :placeholder => 'Temat', :required => true
+  .field= f.text_area :body, :placeholder => 'Treść wiadomości', :rows => 10, :required => true
+  %p.notice= flash[:notice]
+  %p.error= flash[:error]
+  = f.submit 'Wyślij'

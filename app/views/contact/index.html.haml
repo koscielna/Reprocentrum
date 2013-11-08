@@ -1,15 +1,14 @@
 #services-content
   .white
-    %h2 Adres i dojazd
     .service
+      %h2 Adres i dojazd
       %ul
         %li ul. Trzy Lipy 2
         %li 80 - 127 Gdańsk
         %li kom +48 602 408 880
         %li tel. 58 340 35 75
-      %h2 Skontaktuj się z nami za pomocą formularza
-      .service-col
-
+      %h2#form Skontaktuj się z nami za pomocą formularza
+      = render 'form'
     = image_tag 'cityoffice.jpg', alt: 'CityOffice'
     %a{:href => 'https://maps.google.pl/maps?q=Trzy+Lipy+2,+Gda%C5%84sk', :target => '_blank'}
       .mapa
