@@ -576,14 +576,21 @@ ul.style5 .first {
 }
 
 #applications {
-  width: 100px;
-  float: left;
+  display: block;
+  overflow: auto;
 
   img.icon {
-    float: none;
+    float: left;
     width: 70px;
     height: 70px;
     padding-bottom: 20px;
+  }
+
+  ul {
+    margin-top: 0px;
+    float: left;
+    margin-top: 10px;
+    list-style: none
   }
 }
 
