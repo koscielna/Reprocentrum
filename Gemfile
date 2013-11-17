@@ -20,7 +20,6 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'thin'
 gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 
 group :doc do
   gem 'sdoc', require: false

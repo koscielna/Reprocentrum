@@ -16,13 +16,6 @@ GIT
       ransack (~> 1.0)
       sass-rails
 
-GIT
-  remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
-  revision: efab96f854dc8b08d46297b9af313fbe815124ac
-  specs:
-    bootstrap-sass (3.0.2.1)
-      sass (~> 3.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -207,7 +200,6 @@ DEPENDENCIES
   awesome_print
   better_errors
   binding_of_caller
-  bootstrap-sass!
   coffee-rails (~> 4.0.0)
   colored
   haml-rails
