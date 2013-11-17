@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require waypoints
+//= require waypoints-sticky
 //= require_tree .
