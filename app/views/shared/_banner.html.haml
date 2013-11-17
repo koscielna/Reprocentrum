@@ -1,1 +1,11 @@
-#banner= image_tag 'header3.jpg', alt: 'banner'
+.jcarousel-wrapper
+  .jcarousel
+    %ul
+      %li= image_tag 'header1.png'
+      %li= image_tag 'header2.jpg'
+      %li= image_tag 'header3.jpg'
+
+  = link_to raw('&lsaquo;'), '#', class: 'jcarousel-control-prev'
+  = link_to raw('&rsaquo;'), '#', class: 'jcarousel-control-next'
+
+  %p.jcarousel-pagination
