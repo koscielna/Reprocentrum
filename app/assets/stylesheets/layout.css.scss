@@ -575,22 +575,24 @@ ul.style5 .first {
   padding-bottom: 20px
 }
 
-.application {
-  display: block;
-  overflow: auto;
+#applications{
+  .app {
+    display: block;
+    overflow: auto;
 
-  img.icon {
-    float: left;
-    width: 70px;
-    height: 70px;
-    padding-bottom: 20px;
-  }
+    img.icon {
+      float: left;
+      width: 70px;
+      height: 70px;
+      padding-bottom: 20px;
+    }
 
-  ul {
-    margin-top: 0px;
-    float: left;
-    margin-top: 10px;
-    list-style: none
+    ul {
+      margin-top: 0px;
+      float: left;
+      margin-top: 10px;
+      list-style: none
+    }
   }
 }
 
@@ -600,6 +602,11 @@ ul.style5 .first {
   border-top: 1px solid #E0E0E0;
   border-bottom: 1px solid #E9E9E9;
   background: #F9F9F9;
+
+  &.stuck {
+    position: fixed;
+    top: 0;
+  }
 }
 
 #services-menu ul {

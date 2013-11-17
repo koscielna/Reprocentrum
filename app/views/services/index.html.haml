@@ -98,26 +98,27 @@
     = image_tag 'Skaner.jpg'
   .grayed-out#aplikacje
     %h2 Aplikacje
-    .application
-      = image_tag 'autocad.png', alt: 'AutoCad', class: 'icon'
-      %ul
-        %li
-          %b AutoCad
-        %li wersja 2011
-        %li wydruk, edycja
-    .application
-      = image_tag 'photoshop.png', alt: 'Photoshop', class: 'icon'
-      %ul
-        %li
-          %b Photoshop
-        %li wydruk, edycja
-    .application
-      = image_tag 'Corel.png', alt: 'Corel', class: 'icon'
-      %ul
-        %li
-          %b CorelDraw
-        %li wersja 14
-        %li wydruk, edycja
+    #applications
+      .app
+        = image_tag 'autocad.png', alt: 'AutoCad', class: 'icon'
+        %ul
+          %li
+            %b AutoCad
+          %li wersja 2011
+          %li wydruk, edycja
+      .app
+        = image_tag 'photoshop.png', alt: 'Photoshop', class: 'icon'
+        %ul
+          %li
+            %b Photoshop
+          %li wydruk, edycja
+      .app
+        = image_tag 'Corel.png', alt: 'Corel', class: 'icon'
+        %ul
+          %li
+            %b CorelDraw
+          %li wersja 14
+          %li wydruk, edycja
   .white#kalibracja
     %h2 Kalibracja
     .service
