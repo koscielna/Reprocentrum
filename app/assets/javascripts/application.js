@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require waypoints
 //= require waypoints-sticky
+//= require bootstrap/carousel
 //= require_tree .
