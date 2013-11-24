@@ -2,14 +2,13 @@
   #fbox1
     %h2 Aktualności
     %ul.style3
-      - @posts.each do |post|
+      - @entries.each do |entry|
         %li
           %p.date
-            %a{href: '#'}
-              April
-              %b 20
-          %h3= post.topic
-          %p= post.body
+            = I18n.l(entry.created_at, :locale => 'pl', :format => '%b')
+            %b= entry.created_at.day
+          %h3= entry.topic
+          %p= entry.body
   #fbox2
     %h2 Zaufali nam
     %ul

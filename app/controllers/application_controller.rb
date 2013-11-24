@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   before_action :set_posts
 
   def set_posts
-    @posts = Post.all
+    @entries = Post.order(created_at: :desc).limit(3)
   end
 end
