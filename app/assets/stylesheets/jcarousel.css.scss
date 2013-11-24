@@ -1,5 +1,5 @@
 .jcarousel-wrapper {
-  margin: 20px auto;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -9,6 +9,8 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  margin-top: -1px;
+  border-bottom: 4px solid #E9E9E9;
 }
 
 .jcarousel ul {
@@ -22,7 +24,6 @@
 .jcarousel li {
   width: 200px;
   float: left;
-  border: 1px solid #fff;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -68,7 +69,7 @@
 
 .jcarousel-pagination {
   position: absolute;
-  bottom: -40px;
+  bottom: 10px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
