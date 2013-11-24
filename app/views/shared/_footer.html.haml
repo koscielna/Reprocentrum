@@ -12,11 +12,10 @@
   #fbox2
     %h2 Zaufali nam
     %ul
-      %li= link_to 'Firma', '#'
-      %li= link_to 'Firma', '#'
-      %li= link_to 'Firma', '#'
-      %li= link_to 'Firma', '#'
-      %li= link_to 'Firma', '#'
+      - @firms.each do |firm|
+        %li
+          = link_to firm.name, firm.url
+          = image_tag firm.logo
   #fbox3
     %h2 Kontakt
     %p
