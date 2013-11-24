@@ -2,30 +2,14 @@
   #fbox1
     %h2 Aktualności
     %ul.style3
-      %li
-        %p.date
-          %a{href: '#'}
-            April
-            %b 20
-        %h3 Dura lex sed lex.
-        %p
-          %a{href: '#'} Disce latine.
-      %li
-        %p.date
-          %a{href: '#'}
-            April
-            %b 20
-        %h3 Dura lex sed lex.
-        %p
-          %a{href: '#'} Disce latine.
-      %li
-        %p.date
-          %a{href: '#'}
-            April
-            %b 20
-        %h3 Dura lex sed lex.
-        %p
-          %a{href: '#'} Disce latine.
+      - @posts.each do |post|
+        %li
+          %p.date
+            %a{href: '#'}
+              April
+              %b 20
+          %h3= post.topic
+          %p= post.body
   #fbox2
     %h2 Zaufali nam
     %ul
