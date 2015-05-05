@@ -1,36 +1,36 @@
-#footer-content.container
-  #fbox1
-    %h2 Aktualności
-    %ul.style3
-      - @entries.each do |entry|
+.container
+  .footer
+    .col-xs-4.col-md-4.col-sm-4.col-lg-4.wide#blue
+      %h2 Aktualności
+      %ul.style3
+        - @entries.each do |entry|
+          %li
+            %p.date
+              = I18n.l(entry.created_at, :locale => 'pl', :format => '%b')
+              %b= entry.created_at.day
+            %h3= entry.topic
+            %p= entry.body
+    .col-xs-4.col-md-4.col-sm-4.col-lg-4.narrow#magenta
+      %h2 Zaufali nam
+      %ul
+        - @firms.each do |firm|
+          %li
+            = link_to firm.name, firm.url
+    .col-xs-4.col-md-4.col-sm-4.col-lg-4.narrow#yellow
+      %h2 Kontakt
+      %p
+        %b Adres
+        ul. Trzy Lipy 2
+        80-172 Gdańsk
+      %ul.style5
         %li
-          %p.date
-            = I18n.l(entry.created_at, :locale => 'pl', :format => '%b')
-            %b= entry.created_at.day
-          %h3= entry.topic
-          %p= entry.body
-  #fbox2
-    %h2 Zaufali nam
-    %ul
-      - @firms.each do |firm|
+          %span.mail
+            Mail
+          %span= mail_to 'repro@reprocentrum.com'
         %li
-          = link_to firm.name, firm.url
-          = image_tag firm.logo
-  #fbox3
-    %h2 Kontakt
-    %p
-      %b Adres
-      ul. Trzy Lipy 2
-      80-172 Gdańsk
-    %ul.style5
-      %li
-        %span.mail
-          Mail
-        %span= mail_to 'repro@reprocentrum.com'
-      %li
-        %span.phone
-          Telefon
-        %span
-          tel. 58 340 35 75, +48 602 408 880
-#footer
-  %p Copyright (c) 2013 Aleksandra Nabożny &amp; co. All rights reserved. Design by me. Photos by whoever would do the photographs.
+          %span.phone
+            Telefon
+          %span
+            tel. 58 340 35 75, +48 602 408 880
+  #footer
+    %p Copyright (c) 2013 Aleksandra Nabożny &amp; co. All rights reserved. Design by me. Photos by whoever would do the photographs.
