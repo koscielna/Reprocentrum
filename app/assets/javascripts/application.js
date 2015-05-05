@@ -16,4 +16,5 @@
 //= require waypoints-sticky
 //= require jcarousel
 //= require jcarousel-responsive
+//= require bootstrap-sprockets
 //= require_tree .
