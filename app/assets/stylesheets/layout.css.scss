@@ -253,12 +253,6 @@ ul.style5 .first {
   box-shadow: 0px 10px 0px rgba(0,0,0,0.03), 0px -10px 0px rgba(0,0,0,0.03);
 }
 
-.container {
-  width: 80%;
-  margin: 0px auto;
-}
-
-
 .clearfix {
   clear: both;
 }
@@ -658,17 +652,7 @@ ul.style5 .first {
   height: 20px;
 }
 
-.mapa {
-  background-image: url('mapa.png');
-  float: left;
-  height: 405px;
-  width: 715px;
-  margin-top: 10%;
-  clear: both;
-  -webkit-box-shadow: 0px 1px 26px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    0px 1px 26px rgba(50, 50, 50, 0.75);
-  box-shadow:         0px 1px 26px rgba(50, 50, 50, 0.75);
-}
+
 
 .contact-form {
   .field{
