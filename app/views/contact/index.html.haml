@@ -1,14 +1,22 @@
-#services-content
-  .white
-    .service
-      %h2 Adres i dojazd
-      %ul
-        %li ul. Trzy Lipy 2
-        %li 80 - 127 Gdańsk
-        %li kom +48 602 408 880
-        %li tel. 58 340 35 75
-      %h2#form Skontaktuj się z nami za pomocą formularza
-      = render 'form'
-    = image_tag 'cityoffice.jpg', alt: 'CityOffice'
-    %a{:href => 'https://maps.google.pl/maps?q=Trzy+Lipy+2,+Gda%C5%84sk', :target => '_blank'}
-      .mapa
+%a.mapa{ :href => 'https://maps.google.pl/maps?q=Trzy+Lipy+2,+Gda%C5%84sk', :target => '_blank' }
+.clearfix
+#index
+  .services
+    .container
+      .col-md-4
+        .white.contact
+          %h2 Adres i dojazd
+          %ul.none
+            %li ul. Trzy Lipy 2
+            %li 80 - 127 Gdańsk
+            %li kom +48 602 408 880
+            %li tel. 58 340 35 75
+
+          %p Dojazd na parking przed lokalem prowadzi od ulicy Shouberta. Zjeżdżając z ronda należy skręcić w tę ulicę i zaraz w prawo. Parking jest dostępny dla wszystkich klientów City Office i znajduje się tuż przy wejściu do Reprocentrum. Zapraszamy!
+        / = image_tag 'cityoffice.jpg', alt: 'CityOffice', width: '100%'
+      .col-md-8
+        .grayed-out.contact
+          %h2#form Skontaktuj się z nami za pomocą formularza
+          = render 'form'
+
+

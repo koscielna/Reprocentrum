@@ -3,6 +3,12 @@
   .field= f.text_field :email, :placeholder => 'E-mail', :required => true
   .field= f.text_field :topic, :placeholder => 'Temat', :required => true
   .field= f.text_area :body, :placeholder => 'Treść wiadomości', :rows => 10, :required => true
-  %p.notice= flash[:notice]
-  %p.error= flash[:error]
-  = f.submit 'Wyślij'
+  .alert.alert-success{ role: 'alert' }
+    %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+      %span{"aria-hidden" => "true"} ×
+    = flash[:notice]
+  .alert.alert-danger{ role: 'alert' }
+    %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+      %span{"aria-hidden" => "true"} ×
+    = flash[:error]
+  .btn.wide= f.submit 'Wyślij', class: 'btn-form'
