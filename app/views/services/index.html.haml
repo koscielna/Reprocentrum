@@ -1,131 +1,174 @@
-#services-menu
-  %ul
-    %li= link_to 'Ksero', '#ksero-czarno-biale'
-    %li= link_to 'Wydruki', '#wydruki'
-    %li= link_to 'Składanie', '#skladanie'
-    %li= link_to 'Oprawianie', '#oprawianie'
-    %li= link_to 'Skanowanie', '#skanowanie'
-    %li= link_to 'Aplikacje', '#aplikacje'
-    %li= link_to 'Kalibracja', '#kalibracja'
-    %li= link_to 'Zapis danych', '#zapis-danych'
+= render 'shared/banner'
+#index
+  .services
 
-#services-content
-  %h1 Usługi jakie oferujemy
-  .white#ksero-czarno-biale
-    .service
-      %h2 Ksero czarno-białe
-      .service-col
-        %b MAŁY FORMAT
-        %ul
-          %li A4 - A3
-          %li papier
-          %li kalka
-          %li folia
-          %li folia samoprzylepna matowa A4
-      .service-col
-        %b DUŻY FORMAT
-        %ul
-          %li A4 - 1124 [mm]
-          %li papier
-          %li kalka (lewo- lub prawostronna)
-          %li folia (lewo- lub prawostronna)
-      .warning
-        UWAGA: Możliwość przeskalowania do dowolnego formatu.
-    = image_tag 'kserokopiarka.jpg', alt: 'ksero'
-  .white#ksero-kolorowe
-    %h2 Ksero kolorowe
-    .service
-      %ul
-        %li Kolorowe wydruki laserowe A4 - A3
-        %li Duży format - wydruk atramentowy max do 1120 [mm]
-  .grayed-out#wydruki
-    %h2 Wydruki
-    .service
-      .service-col
-        %b CZARNO - BIAŁE
-        %ul
-          %li materiały: papier, kalka, folia
-          %li szerokość plotu: 297 - 1120 [mm]
-          %li długość plotu: z rolki
-          %li plotowanie plików w formatach wektorowych
-          %li i rastrowych
-      .service-col
-        %b KOLOROWE
-        %ul
-          %li materiały: papier, folia
-          %li szerokość plotu: 297 - 1120 [mm]
-          %li długość plotu: z rolki
-      .warning
-        UWAGA: Wydruki kolorowe kartometryczne, idealne do ZUD-u.
-    = image_tag 'ploter.jpg'
-  .white#skladanie
-    %h2 Składanie
-    .service
-      %b Składamy dokumentację ręcznie i maszynowo:
-      %ul
-        %li do formatu A4 z marginesem 25 mm na wypięcie
-        %li do formatu A4 bez marginesu (do teczki)
-        %li do formatu A3
-    = image_tag 'skladarka.jpg'
-  .grayed-out#oprawianie
-    %h2 Oprawianie
-    .service
-      %b Oprawiamy profesjonalnie dokumentację techniczną (format oprawy A4, A3)
-      %ul
-        %li bindowanie - różnokolorowe oprawy grzebieniowe z okładką
-        %li listwy Grippa - elastyczne oprawy w różnych kolorach
-        %li Greenbinder - oprawy typu Greenbinder (grzbiet do 100 mm)
-        %li segregatory
-        %li teczki
-    = image_tag 'greenbinder.jpg'
-  .white#skanowanie
-    %h2 Skanowanie czarno-białe i kolorowe
-    .service
-      .service-col
-        %b MAŁY FORMAT</b>
-        %ul
-          %li format A4
-          %li rozdzielczość 600 DPI
-          %li zapis w formacie .tif, .jpg, .pdf
-      .service-col
-        %b DUŻY FORMAT
-        %ul
-          %li maksymalna szerkość skanu 1270 mm
-          %li rozdzielczość max 600 DPI
-          %li zapis w formacie .tif, .jpg, .pdf, .bmp (na życzenie klienta konwersja do dowolnego formatu rastrowego)
-      .warning
-      UWAGA: Skany klienta przesyłamy na wskazany adres internetowy. Istnieje możliwość obróbki skanów - czyszczenie tła, kalibracja, etc.
-    = image_tag 'scanner.jpg'
-  .grayed-out#aplikacje
-    %h2 Aplikacje
-    #applications
-      .app
-        = image_tag 'autocad.png', alt: 'AutoCad', class: 'icon'
-        %ul
-          %li
-            %b AutoCad
-          %li wersja 2011
-          %li wydruk, edycja
-      .app
-        = image_tag 'photoshop.png', alt: 'Photoshop', class: 'icon'
-        %ul
-          %li
-            %b Photoshop
-          %li wydruk, edycja
-      .app
-        = image_tag 'corel.png', alt: 'Corel', class: 'icon'
-        %ul
-          %li
-            %b CorelDraw
-          %li wersja 14
-          %li wydruk, edycja
-  .white#kalibracja
-    %h2 Kalibracja
-    .service
-      Wykonujemy profesjonalną kalibrację skanów w specjalistycznym programie. Dzięki temu unikniesz problemu z ZUD-em.
-  .white#zapis-danych
-    %h2 Zapis danych
-    .service
-      %ul
-        %li zapis na większości nośników
-        %li e-mail
+    #services-menu
+      %nav.navbar.navbar-default
+        .container-fluid
+          .navbar-header
+            %button.navbar-toggle.collapsed{ "data-target" => "#nav-services", "data-toggle" => "collapse", :type => "button" }
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+          #nav-services.collapse.navbar-collapse
+            %ul.nav.navbar-nav
+              %li= link_to 'Ksero', '#ksero-czarno-biale'
+              %li= link_to 'Wydruki', '#wydruki'
+              %li= link_to 'Składanie', '#skladanie'
+              %li= link_to 'Oprawianie', '#oprawianie'
+              %li= link_to 'Skanowanie', '#skanowanie'
+              %li= link_to 'Aplikacje', '#aplikacje'
+              %li= link_to 'Kalibracja', '#kalibracja'
+              %li= link_to 'Zapis danych', '#zapis-danych'
+              %li
+                %a{ href: '#index'}
+                  %span.glyphicon.glyphicon-arrow-up
+
+    .container
+      %h1.services-header Usługi jakie oferujemy
+
+    .white#ksero-czarno-biale
+      .container
+        .col-md-8
+          %h2 Ksero czarno-białe
+          .col-md-6
+            %b MAŁY FORMAT
+            %ul
+              %li A4 - A3
+              %li papier
+              %li kalka
+              %li folia
+              %li folia samoprzylepna matowa A4
+          .col-md-6
+            %b DUŻY FORMAT
+            %ul
+              %li A4 - 1124 [mm]
+              %li papier
+              %li kalka (lewo- lub prawostronna)
+              %li folia (lewo- lub prawostronna)
+          %p UWAGA: Możliwość przeskalowania do dowolnego formatu.
+          %h2 Ksero kolorowe
+          .col-md-6#ksero-kolorowe
+            .service
+              %ul
+                %li Kolorowe wydruki laserowe A4 - A3
+                %li Duży format - wydruk atramentowy max do 1120 [mm]
+        .col-md-4
+          = image_tag 'kserokopiarka.jpg', alt: 'ksero'
+        .clearfix
+
+    .grayed-out#wydruki
+      .container
+        .col-md-8
+          %h2 Wydruki
+          .col-md-6
+            %b CZARNO - BIAŁE
+            %ul
+              %li materiały: papier, kalka, folia
+              %li szerokość plotu: 297 - 1120 [mm]
+              %li długość plotu: z rolki
+              %li plotowanie plików w formatach wektorowych
+              %li i rastrowych
+          .col-md-6
+            %b KOLOROWE
+            %ul
+              %li materiały: papier, folia
+              %li szerokość plotu: 297 - 1120 [mm]
+              %li długość plotu: z rolki
+          %p UWAGA: Wydruki kolorowe kartometryczne, idealne do ZUD-u.
+        .col-md-4
+          = image_tag 'ploter.jpg'
+        .clearfix
+
+    .white#skladanie
+      .container
+        .col-md-8
+          %h2 Składanie
+          %b Składamy dokumentację ręcznie i maszynowo:
+          %ul
+            %li do formatu A4 z marginesem 25 mm na wypięcie
+            %li do formatu A4 bez marginesu (do teczki)
+            %li do formatu A3
+        .col-md-4
+          = image_tag 'skladarka.jpg'
+        .clearfix
+
+    .grayed-out#oprawianie
+      .container
+        .col-md-8
+          %h2 Oprawianie
+          %b Oprawiamy profesjonalnie dokumentację techniczną (format oprawy A4, A3)
+          %ul
+            %li bindowanie - różnokolorowe oprawy grzebieniowe z okładką
+            %li listwy Grippa - elastyczne oprawy w różnych kolorach
+            %li Greenbinder - oprawy typu Greenbinder (grzbiet do 100 mm)
+            %li segregatory
+            %li teczki
+        .col-md-4
+          = image_tag 'greenbinder.jpg'
+        .clearfix
+
+    .white#skanowanie
+      .container
+        .col-md-8
+          %h2 Skanowanie czarno-białe i kolorowe
+          .col-md-6
+            %b MAŁY FORMAT</b>
+            %ul
+              %li format A4
+              %li rozdzielczość 600 DPI
+              %li zapis w formacie .tif, .jpg, .pdf
+          .col-md-6
+            %b DUŻY FORMAT
+            %ul
+              %li maksymalna szerkość skanu 1270 mm
+              %li rozdzielczość max 600 DPI
+              %li zapis w formacie .tif, .jpg, .pdf, .bmp (na życzenie klienta konwersja do dowolnego formatu rastrowego)
+          %p UWAGA: Skany klienta przesyłamy na wskazany adres internetowy. Istnieje możliwość obróbki skanów - czyszczenie tła, kalibracja, etc.
+        .col-md-4
+          = image_tag 'scanner.jpg'
+        .clearfix
+
+    .grayed-out#aplikacje
+      .container
+        .col-md-8
+          %h2 Aplikacje
+          #applications
+            .app
+              = image_tag 'autocad.png', alt: 'AutoCad', class: 'icon'
+              %ul
+                %li
+                  %b AutoCad
+                %li wersja 2011
+                %li wydruk, edycja
+            .app
+              = image_tag 'photoshop.png', alt: 'Photoshop', class: 'icon'
+              %ul
+                %li
+                  %b Photoshop
+                %li wydruk, edycja
+            .app
+              = image_tag 'corel.png', alt: 'Corel', class: 'icon'
+              %ul
+                %li
+                  %b CorelDraw
+                %li wersja 14
+                %li wydruk, edycja
+        .clearfix
+
+    .white#kalibracja
+      .container
+        .col-md-8
+          %h2 Kalibracja
+          Wykonujemy profesjonalną kalibrację skanów w specjalistycznym programie. Dzięki temu unikniesz problemu z ZUD-em.
+      .clearfix
+
+    .white#zapis-danych
+      .container
+        .col-md-8
+          %h2 Zapis danych
+          %ul
+            %li zapis na większości nośników
+            %li e-mail
+        .clearfix
