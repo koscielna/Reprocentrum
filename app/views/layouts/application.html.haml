@@ -8,10 +8,9 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .container
-      = render 'shared/top'
-      = render 'shared/header'
-      = render 'shared/menu'
-      = render 'shared/banner'
-      = yield
+    = render 'shared/top'
+    = render 'shared/header'
+    = render 'shared/menu'
+    / = render 'shared/banner'
+    = yield
     = render 'shared/footer'
