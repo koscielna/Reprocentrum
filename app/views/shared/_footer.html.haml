@@ -1,36 +1,35 @@
-.container
-  .footer
-    .col-xs-4.col-md-4.col-sm-4.col-lg-4.wide#blue
-      %h2 Aktualności
-      %ul.style3
+.footer
+  .container
+    .col-xs-12.col-md-4.col-sm-4.col-lg-4
+      #blue
+        .topic Aktualności
         - @entries.each do |entry|
-          %li
-            %p.date
-              = I18n.l(entry.created_at, :locale => 'pl', :format => '%b')
-              %b= entry.created_at.day
-            %h3= entry.topic
-            %p= entry.body
-    .col-xs-4.col-md-4.col-sm-4.col-lg-4.narrow#magenta
-      %h2 Zaufali nam
-      %ul
-        - @firms.each do |firm|
-          %li
-            = link_to firm.name, firm.url
-    .col-xs-4.col-md-4.col-sm-4.col-lg-4.narrow#yellow
-      %h2 Kontakt
-      %p
-        %b Adres
-        ul. Trzy Lipy 2
-        80-172 Gdańsk
-      %ul.style5
-        %li
-          %span.mail
-            Mail
-          %span= mail_to 'repro@reprocentrum.com'
-        %li
-          %span.phone
-            Telefon
-          %span
-            tel. 58 340 35 75, +48 602 408 880
-  #footer
-    %p Copyright (c) 2013 Aleksandra Nabożny &amp; co. All rights reserved. Design by me. Photos by whoever would do the photographs.
+          %h4= entry.topic
+          %i.date
+            = I18n.l(entry.created_at, :locale => 'pl', :format => '%b')
+            = entry.created_at.day
+
+          %p.right= entry.body
+    .col-xs-12.col-md-4.col-sm-4.col-lg-4
+      #magenta
+        .topic Zaufali nam
+        %ul
+          - @firms.each do |firm|
+            %li
+              = link_to firm.name, firm.url
+    .col-xs-12.col-md-4.col-sm-4.col-lg-4
+      #yellow
+        .topic Kontakt
+        %p
+          %b Reprocentrum
+        %p ul. Trzy Lipy 2
+        %p 80-172 Gdańsk
+        %i.fa.fa-paper-plane
+        %p= mail_to 'repro@reprocentrum.com'
+        %p tel. 58 340 35 75,
+        %p +48 602 408 880
+  .block
+    %p
+      Icons designed by
+      %span= link_to 'Freepic', 'www.freepic.com'
+
