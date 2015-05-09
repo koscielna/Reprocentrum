@@ -1,7 +1,7 @@
 #menu
-  %ul
-    %li= link_to 'Home', root_path
-    %li= link_to 'Usługi', '/uslugi'
-    %li= link_to 'Sterowniki', '/sterowniki'
-    %li= link_to 'Kontakt', '/kontakt'
-.clear
+  .container
+    %ul
+      %li= link_to 'Home', root_path
+      %li= link_to 'Usługi', 'uslugi#index'
+      %li= link_to 'Sterowniki', 'sterowniki#index'
+      %li= link_to 'Kontakt', 'kontakt#index'
