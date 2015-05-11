@@ -4,8 +4,10 @@ class ContactController < ApplicationController
   end
 
   def deliver
-    message = Message.new(message_params)
-    if message.save
+    @message = Message.new(message_params)
+    if @message.save
+
+      ContactMessage.send_message(@message).deliver
       flash[:notice] = "Twoja wiadomość została wysłana"
     else
       flash[:error] = "Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę"
