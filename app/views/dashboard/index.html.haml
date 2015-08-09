@@ -2,29 +2,29 @@
 #index
   .container
     .jumbotron.center.white
-      %h1 Marketing stuff!
-      %p.lead Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.
+      %h1 Witamy w Reprocentrum!
+      %p.lead Oferujemy profesjonalne usługi kserowania, druku i skanowania. Zapraszamy zarówno biura projektowe, studentów kierunków technicznych i artystycznych, jak i osoby prywatne.
       %p
         .btn.btn-lg.btn-success=link_to 'Get started today', '#'
     .row
       .col-lg-4
         .image.image-full= image_tag 'svg/chemistry29.svg', alt: 'doświadczenie'
         .col-header Wieloletnie doświadczenie
-        %p.col-text Aliquam erat volutpat. Pellentesque tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh.
         %a.button-style.blue{ href: '/doswiadczenie' }
           Dowiedz się więcej
           = image_tag 'list-marker-blue.png', class: 'marker'
       .col-lg-4
         .image.image-full= image_tag 'svg/two205.svg', alt: 'kadra'
         .col-header Wykwalifikowana kadra
-        %p.col-text Whether you’re a company that wants a batch of business cards or someone who wants a huge banner to embarrass their friend on their 40th birthday we can do that for you.
         %a.button-style.magenta{ href: '/kadra' }
           Dowiedz się więcej
           = image_tag 'list-marker-magenta.png', class: 'marker'
       .col-lg-4
         .image.image-full= image_tag 'svg/livingroom8.svg', alt: 'kadra'
         .col-header Druk bez wychodzenia z domu
-        %p.col-text Whatever the job we pride ourselves on high quality design and print work using a range of methods from the latest in digital printing to more traditional finishing techniques.
         %a.button-style.yellow{ href: '/druk' }
           Dowiedz się więcej
           = image_tag 'list-marker-yellow.png', class: 'marker'
+      = render 'crew'
+      = render 'experience'
+      = render 'print'

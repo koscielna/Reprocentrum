@@ -52,8 +52,8 @@
           .col-md-6#ksero-kolorowe
             .service
               %ul
-                %li Kolorowe wydruki laserowe A4 - A3
-                %li Duży format - wydruk atramentowy max do 1120 [mm]
+                %li Kolorowe wydruki laserowe A4 - A0+
+                %li Duży format - wydruk atramentowy do 1120 [mm]
         .col-md-4
           = image_tag 'kserokopiarka.jpg', alt: 'ksero'
         .clearfix
@@ -76,7 +76,7 @@
               %li materiały: papier, folia
               %li szerokość plotu: 297 - 1120 [mm]
               %li długość plotu: z rolki
-          %p UWAGA: Wydruki kolorowe kartometryczne, idealne do ZUD-u.
+          %p UWAGA: Wydruki geodezyjne kartometryczne, idealne do ZUD-u.
         .col-md-4
           = image_tag 'ploter.jpg'
         .clearfix
@@ -85,10 +85,11 @@
       .container
         .col-md-8
           %h2 Składanie
-          %b Składamy dokumentację ręcznie i maszynowo:
+          %b Składamy ręcznie i maszynowo:
           %ul
             %li do formatu A4 z marginesem 25 mm na wypięcie
             %li do formatu A4 bez marginesu (do teczki)
+            %li z wpinką do segregatora
             %li do formatu A3
         .col-md-4
           = image_tag 'skladarka.jpg'
@@ -100,9 +101,9 @@
           %h2 Oprawianie
           %b Oprawiamy profesjonalnie dokumentację techniczną (format oprawy A4, A3)
           %ul
-            %li bindowanie - różnokolorowe oprawy grzebieniowe z okładką
+            %li bindowanie - różnokolorowe oprawy z grzbietem metalowym lub plastikowym
             %li listwy Grippa - elastyczne oprawy w różnych kolorach
-            %li Greenbinder - oprawy typu Greenbinder (grzbiet do 100 mm)
+            %li Greenbinder - oprawy typu Greenbinder (grzbiet do kilkunastu centymetrów)
             %li segregatory
             %li teczki
         .col-md-4
@@ -114,7 +115,7 @@
         .col-md-8
           %h2 Skanowanie czarno-białe i kolorowe
           .col-md-6
-            %b MAŁY FORMAT</b>
+            %b MAŁY FORMAT
             %ul
               %li format A4
               %li rozdzielczość 600 DPI
@@ -123,7 +124,7 @@
             %b DUŻY FORMAT
             %ul
               %li maksymalna szerkość skanu 1270 mm
-              %li rozdzielczość max 600 DPI
+              %li rozdzielczość do 600 DPI
               %li zapis w formacie .tif, .jpg, .pdf, .bmp (na życzenie klienta konwersja do dowolnego formatu rastrowego)
           %p UWAGA: Skany klienta przesyłamy na wskazany adres internetowy. Istnieje możliwość obróbki skanów - czyszczenie tła, kalibracja, etc.
         .col-md-4
@@ -140,7 +141,7 @@
               %ul
                 %li
                   %b AutoCad
-                %li wersja 2011
+                %li wersja 2015
                 %li wydruk, edycja
             .app
               = image_tag 'photoshop.png', alt: 'Photoshop', class: 'icon'
@@ -154,6 +155,13 @@
                 %li
                   %b CorelDraw
                 %li wersja 14
+                %li wydruk, edycja
+            .app
+              = image_tag 'acrobat.png', alt: 'Acrobat', class: 'icon'
+              %ul
+                %li
+                  %b Adobe Acrobat
+                %li wersja aktualna
                 %li wydruk, edycja
         .clearfix
 
@@ -169,6 +177,6 @@
         .col-md-8
           %h2 Zapis danych
           %ul
-            %li zapis na większości nośników
+            %li zapis na nośniki elektroniczne
             %li e-mail
         .clearfix
