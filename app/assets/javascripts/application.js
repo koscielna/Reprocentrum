@@ -22,28 +22,23 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-// function initialize() {
-//   var mapProp = {
-//     center:new google.maps.LatLng(51.508742,-0.120850),
-//     zoom:5,
-//     mapTypeId:google.maps.MapTypeId.ROADMAP
-//   };
-//   var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
-// }
-
-
-
 $(document).ready(function() {
-  handler = Gmaps.build('Google', { markers: { maxRandomDistance: null } });
+  var handler = Gmaps.build('Google', {
+      markers: { maxRandomDistance: null
+    }
+  });
   handler.buildMap({ provider: {
     center:      { lat: 54.35551215, lng: 18.59537959 },
     scrollwheel: false,
     mapTypeId:   google.maps.MapTypeId.ROADMAP,
     styles:      mapStyle,
-    zoom:        17
+    zoom:        15
   }, internal: {id: 'googleMap'}}, function(){
     markers = handler.addMarkers([
-      { lat: 54.355457, lng: 18.595421, maxRandomDistance: null }
+      {
+        lat: 54.355457,
+        lng: 18.595421
+      }
     ]);
   });
 

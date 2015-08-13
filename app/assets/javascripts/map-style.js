@@ -14,16 +14,10 @@ var mapStyle =
     },
     {
         "featureType": "poi",
-        "elementType": "geometry.fill",
+        "elementType": "all",
         "stylers": [
             {
-                "visibility": "on"
-            },
-            {
-                "hue": "#1900ff"
-            },
-            {
-                "color": "#c0e8e8"
+                "visibility": "off"
             }
         ]
     },
@@ -44,7 +38,7 @@ var mapStyle =
         "elementType": "labels",
         "stylers": [
             {
-                "visibility": "off"
+                "lightness": 50
             }
         ]
     },

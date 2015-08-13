@@ -1,23 +1,26 @@
+
 #googleMap
 .clearfix
 #index
   .services
     .container
-      .col-md-4
-        .white.contact
-          %h2 Adres i dojazd
-          %ul.none
-            %li ul. Trzy Lipy 2
-            %li 80 - 127 Gdańsk
-            %li kom +48 602 408 880
-            %li tel. 58 340 35 75
+      .row
+        .col-md-6
+          .white.contact
+            %h2 Adres i dojazd
+            %ul.none
+              %li ul. Trzy Lipy 2
+              %li 80 - 127 Gdańsk
+              %li kom +48 602 408 880
+              %li tel. 58 340 35 75
+            %p Brązowy budynek znajduje się przy rondzie za Carrefourem. Wjazd od podwórka na parking.
+            %br Zapraszamy!
+          .fancybox= image_tag 'cityoffice.jpg'
+        .col-md-6
+          .grayed-out.contact
+            %h2#form Szybki kontakt
+            = render 'form'
 
-          %p Brązowy budynek znajduje się przy rondzie za Carrefourem. Wjazd od podwórka na parking.
-          %br Zapraszamy!
-        / = image_tag 'cityoffice.jpg', alt: 'CityOffice', width: '100%'
-      .col-md-8
-        .grayed-out.contact
-          %h2#form Szybki kontakt
-          = render 'form'
+
 
 
