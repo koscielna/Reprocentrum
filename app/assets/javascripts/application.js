@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
+//= require gmaps/google
 //= require waypoints
 //= require waypoints-sticky
 //= require jcarousel
@@ -19,7 +21,36 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+// function initialize() {
+//   var mapProp = {
+//     center:new google.maps.LatLng(51.508742,-0.120850),
+//     zoom:5,
+//     mapTypeId:google.maps.MapTypeId.ROADMAP
+//   };
+//   var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+// }
+
+
+
 $(document).ready(function() {
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'googleMap'}}, function(){
+    markers = handler.addMarkers([
+      {
+        "lat": 0,
+        "lng": 0,
+        "picture": {
+          "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+          "width":  36,
+          "height": 36
+        },
+        "infowindow": "hello!"
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+
   $('.more-button').on('click', function(event) {
     var element;
     event.preventDefault();
@@ -29,3 +60,7 @@ $(document).ready(function() {
     }, 1000);
   });
 });
+
+
+
+
