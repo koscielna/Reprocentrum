@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require underscore
 //= require gmaps/google
+//= require map-style
 //= require waypoints
 //= require waypoints-sticky
 //= require jcarousel
@@ -33,22 +34,17 @@
 
 
 $(document).ready(function() {
-  handler = Gmaps.build('Google');
-  handler.buildMap({ provider: {}, internal: {id: 'googleMap'}}, function(){
+  handler = Gmaps.build('Google', { markers: { maxRandomDistance: null } });
+  handler.buildMap({ provider: {
+    center:      { lat: 54.35551215, lng: 18.59537959 },
+    scrollwheel: false,
+    mapTypeId:   google.maps.MapTypeId.ROADMAP,
+    styles:      mapStyle,
+    zoom:        17
+  }, internal: {id: 'googleMap'}}, function(){
     markers = handler.addMarkers([
-      {
-        "lat": 0,
-        "lng": 0,
-        "picture": {
-          "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-          "width":  36,
-          "height": 36
-        },
-        "infowindow": "hello!"
-      }
+      { lat: 54.355457, lng: 18.595421, maxRandomDistance: null }
     ]);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
   });
 
   $('.more-button').on('click', function(event) {
