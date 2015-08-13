@@ -15,6 +15,12 @@ $paragraph-font: "Helvetica Neue";
 body {
   font-family: $header-font;
 
+  a:focus, a:active {
+    outline: none;
+    color: $semidark-grey;
+    text-decoration: none;
+  }
+
   p {
     font-family: $paragraph-font;
   }
@@ -60,7 +66,9 @@ body {
 }
 
 .more-button {
-  float: right
+  display: table;
+  align-content: center;
+  width: 100%;
 }
 
 .col-text {
@@ -180,7 +188,7 @@ a.button-style.yellow:hover {
   text-shadow: 0px 1px 0px rgba(0,0,0,.2);
   font-size: 1.1em;
   font-weight: 400;
-  color: #B5B5B5;
+  color: $semidark-grey;
   padding: 10px 0 10px 0;
 }
 
