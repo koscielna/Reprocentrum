@@ -18,3 +18,14 @@
 //= require jcarousel-responsive
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function() {
+  $('.more-button').on('click', function(event) {
+    var element;
+    event.preventDefault();
+    element = $(event.target).attr('href');
+    $('html, body').animate({
+      scrollTop: $(element).offset().top - 50
+    }, 1000);
+  });
+});
