@@ -3,7 +3,10 @@
     .center=image_tag 'zaba.jpg'
     .jumbotron.center.white
       %h1 Nie musisz zjawiać się u nas w biurze, abyśmy zrealizowali Twoje zlecenie
-      %p.lead Abyśmy jak najlepiej zinterpretowali Twoje zamówienie, wyślij maila wraz z załącznikiem na repro@reprocentrum.com trzymając się tego schematu:
+      %p.lead
+        Abyśmy jak najlepiej zinterpretowali Twoje zamówienie, wyślij maila wraz z załącznikiem na
+        %span=mail_to "repro@reprocentrum.com"
+        trzymając się tego schematu:
       .row
         .col-md-6
           .well{ style: 'margin-top: 45px' }
