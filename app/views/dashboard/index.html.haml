@@ -1,30 +1,31 @@
 = render 'shared/banner'
 #index
   .container
-    .jumbotron.center.white
-      %h1 Witamy w Reprocentrum!
-      %p.lead Oferujemy profesjonalne usługi kserowania, druku i skanowania. Zapraszamy zarówno biura projektowe, studentów kierunków technicznych i artystycznych, jak i osoby prywatne.
-      %p
-        .btn.btn-lg.btn-success=link_to 'Get started today', '#'
-    .row
-      .col-lg-4
-        .image.image-full= image_tag 'svg/chemistry29.svg', alt: 'doświadczenie'
-        .col-header Wieloletnie doświadczenie
-        %a.button-style.blue{ href: '/doswiadczenie' }
-          Dowiedz się więcej
-          = image_tag 'list-marker-blue.png', class: 'marker'
-      .col-lg-4
-        .image.image-full= image_tag 'svg/two205.svg', alt: 'kadra'
-        .col-header Wykwalifikowana kadra
-        %a.button-style.magenta{ href: '/kadra' }
-          Dowiedz się więcej
-          = image_tag 'list-marker-magenta.png', class: 'marker'
-      .col-lg-4
-        .image.image-full= image_tag 'svg/livingroom8.svg', alt: 'kadra'
-        .col-header Druk bez wychodzenia z domu
-        %a.button-style.yellow{ href: '/druk' }
-          Dowiedz się więcej
-          = image_tag 'list-marker-yellow.png', class: 'marker'
-      = render 'crew'
-      = render 'experience'
-      = render 'print'
+    .section
+      .jumbotron.center.white
+        %h1 Witamy w Reprocentrum!
+        %p.lead Oferujemy profesjonalne usługi kserowania, druku i skanowania. Zapraszamy zarówno biura projektowe, studentów kierunków technicznych i artystycznych, jak i osoby prywatne.
+        %p
+          .btn.btn-lg.btn-success=link_to 'Get started today', '#'
+      .row
+        .col-lg-4
+          .image.image-full= image_tag 'svg/chemistry29.svg', alt: 'doświadczenie'
+          .col-header Wieloletnie doświadczenie
+          %a.more-button.button-style.blue{ href: '#experience' }
+            Dowiedz się więcej
+            = image_tag 'list-marker-blue.png', class: 'marker'
+        .col-lg-4
+          .image.image-full= image_tag 'svg/two205.svg', alt: 'kadra'
+          .col-header Wykwalifikowana kadra
+          %a.more-button.button-style.magenta{ href: '#crew' }
+            Dowiedz się więcej
+            = image_tag 'list-marker-magenta.png', class: 'marker'
+        .col-lg-4
+          .image.image-full= image_tag 'svg/livingroom8.svg', alt: 'druk'
+          .col-header Druk bez wychodzenia z domu
+          %a.more-button.button-style.yellow{ href: '#print' }
+            Dowiedz się więcej
+            = image_tag 'list-marker-yellow.png', class: 'marker'
+    = render 'crew'
+    = render 'experience'
+    = render 'print'

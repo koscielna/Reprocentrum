@@ -1,16 +1,20 @@
-.center=image_tag 'zaba.jpg'
-.jumbotron.center.white
-  %h1 Nie musisz zjawiać się u nas w biurze, abyśmy zrealizowali Twoje zlecenie
-  %p.lead Abyśmy jak najlepiej zinterpretowali Twoje zamówienie, wyślij maila wraz z załącznikiem na repro@reprocentrum.com trzymając się tego schematu:
-  .well
-    %br nazwa_pliku
-    %br ilość sztuk
-    %br rodzaj wydruku
-    %br rodzaj składania
-
-  %p.lead Na przykład:
-  .well
-    %br mapa.jpg
-    %br x2
-    %br wydruk kolorowy na zwykłym papierze
-    %br składanie do teczki
+#print
+  .row.section
+    .center=image_tag 'zaba.jpg'
+    .jumbotron.center.white
+      %h1 Nie musisz zjawiać się u nas w biurze, abyśmy zrealizowali Twoje zlecenie
+      %p.lead Abyśmy jak najlepiej zinterpretowali Twoje zamówienie, wyślij maila wraz z załącznikiem na repro@reprocentrum.com trzymając się tego schematu:
+      .row
+        .col-md-6
+          .well{ style: 'margin-top: 45px' }
+            %br nazwa_pliku
+            %br ilość sztuk
+            %br rodzaj wydruku
+            %br rodzaj składania
+        .col-md-6
+          %p.lead Przykład:
+          .well
+            %br mapa.jpg
+            %br x2
+            %br wydruk kolorowy na zwykłym papierze
+            %br składanie do teczki
