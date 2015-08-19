@@ -23,6 +23,7 @@ gem 'geocode'
 gem 'passenger', '~> 5.0.7'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise', '~> 3.4.1'
+gem 'underscore-rails', '~> 1.8.3'
 
 group :doc do
   gem 'sdoc', require: false
