@@ -12,6 +12,10 @@ $(document).ready ->
     element = $(event.target).attr('href')
     $('html, body').animate { scrollTop: 50 }, 1000
 
+  $('#to-footer').on 'click', (event) ->
+    event.preventDefault()
+    $('html, body').animate { scrollTop: $('#footer').offset().top }, 1000
+
   $(window).scroll ->
     h = document.getElementById("crew").offsetTop
     y = $(window).scrollTop()

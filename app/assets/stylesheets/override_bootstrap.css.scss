@@ -552,6 +552,9 @@ a.button-style:hover {
       }
     }
   }
+  .services .white img, .services .grayed-out img {
+    height: 150px;
+  }
 }
 
 @media (max-width: 767px) {
