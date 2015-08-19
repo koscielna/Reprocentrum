@@ -7,6 +7,20 @@ $(document).ready ->
     element = $(event.target).attr('href')
     $('html, body').animate { scrollTop: $(element).offset().top - 50 }, 1000
 
+  $('.back-to-top').on 'click', (event) ->
+    event.preventDefault()
+    element = $(event.target).attr('href')
+    $('html, body').animate { scrollTop: 50 }, 1000
+
+  $(window).scroll ->
+    h = document.getElementById("crew").offsetTop
+    y = $(window).scrollTop()
+
+    if y > h
+      $('.back-to-top').fadeIn 'slow'
+    else
+      $('.back-to-top').fadeOut 'slow'
+
   $ ->
     navMain = $('.navbar-collapse')
     navMain.on 'click', 'a', null, ->

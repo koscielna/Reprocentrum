@@ -176,8 +176,17 @@ a.button-style.yellow:hover {
   color:  #E32088;
 }
 
-.clear {
-  clear: both;
+.back-to-top {
+  position: fixed;
+  display: none;
+  width: 32px;
+  margin: 0px;
+  padding: 0px;
+  right: 3%;
+  bottom: 5%;
+  img {
+    width: 32px;
+  }
 }
 
 /** COLUMNS **/
