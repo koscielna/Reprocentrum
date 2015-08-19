@@ -100,6 +100,12 @@ body {
   float: left;
 }
 
+.cityoffice {
+  img {
+    width: 70%
+  }
+}
+
 a.button-style.blue:hover {
   &:hover {
     color: $blue
