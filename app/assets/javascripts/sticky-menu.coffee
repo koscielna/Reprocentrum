@@ -7,6 +7,9 @@ $(document).ready ->
     element = $(event.target).attr('href')
     $('html, body').animate { scrollTop: $(element).offset().top - 50 }, 1000
 
+  $('.nav a').on 'click', () ->
+    $(".navbar-toggle").click()
+
   $('.back-to-top').on 'click', (event) ->
     event.preventDefault()
     element = $(event.target).attr('href')

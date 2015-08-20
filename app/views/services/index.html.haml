@@ -1,7 +1,8 @@
 = render 'shared/banner'
 #index
   .services
-
+    .container
+      %p.mobile-menu-h Menu usług:
     #services-menu
       %nav.navbar.navbar-default
         .container-fluid
@@ -13,7 +14,7 @@
               %span.icon-bar
           #nav-services.collapse.navbar-collapse
             %ul.nav.navbar-nav
-              %li= link_to 'Ksero', '#ksero-czarno-biale'
+              %li.navbar_toggle= link_to 'Ksero', '#ksero-czarno-biale'
               %li= link_to 'Wydruki', '#wydruki'
               %li= link_to 'Składanie', '#skladanie'
               %li= link_to 'Oprawianie', '#oprawianie'
@@ -21,9 +22,6 @@
               %li= link_to 'Aplikacje', '#aplikacje'
               %li= link_to 'Kalibracja', '#kalibracja'
               %li= link_to 'Zapis danych', '#zapis-danych'
-              %li
-                %a{ href: '#index'}
-                  %span.glyphicon.glyphicon-arrow-up
 
     .container
       %h1.services-header Usługi jakie oferujemy
@@ -55,7 +53,7 @@
                 %li Kolorowe wydruki laserowe A4 - A0+
                 %li Duży format - wydruk atramentowy do 1120 [mm]
         .col-md-4
-          = image_tag 'services/copier.png', alt: 'ksero'
+          = image_tag 'svg/copier.svg', alt: 'ksero'
         .clearfix
 
     .grayed-out#wydruki
@@ -78,7 +76,7 @@
               %li długość plotu: z rolki
           %p UWAGA: Wydruki geodezyjne kartometryczne, idealne do ZUD-u.
         .col-md-4
-          = image_tag 'services/ploter.png'
+          = image_tag 'svg/ploter.svg'
         .clearfix
 
     .white#skladanie
@@ -92,7 +90,7 @@
             %li z wpinką do segregatora
             %li do formatu A3
         .col-md-4
-          = image_tag 'services/papers.png'
+          = image_tag 'svg/skladanie.svg'
         .clearfix
 
     .grayed-out#oprawianie
@@ -107,7 +105,7 @@
             %li segregatory
             %li teczki
         .col-md-4
-          = image_tag 'services/bind.png'
+          = image_tag 'svg/bind.svg'
         .clearfix
 
     .white#skanowanie
@@ -128,7 +126,7 @@
               %li zapis w formacie .tif, .jpg, .pdf, .bmp (na życzenie klienta konwersja do dowolnego formatu rastrowego)
           %p UWAGA: Skany klienta przesyłamy na wskazany adres internetowy. Istnieje możliwość obróbki skanów - czyszczenie tła, kalibracja, etc.
         .col-md-4
-          = image_tag 'services/scanner.png'
+          = image_tag 'svg/scanner.svg'
         .clearfix
 
     .grayed-out#aplikacje
@@ -164,7 +162,7 @@
                 %li wersja aktualna
                 %li wydruk, edycja
         .col-md-4
-          = image_tag 'services/program.png'
+          = image_tag 'svg/program.svg'
         .clearfix
 
     .white#kalibracja
@@ -182,5 +180,5 @@
             %li zapis na nośniki elektroniczne
             %li e-mail
         .col-md-4
-          = image_tag 'services/save.png'
+          = image_tag 'svg/save.svg'
         .clearfix
