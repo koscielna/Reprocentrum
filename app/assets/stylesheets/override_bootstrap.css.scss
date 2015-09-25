@@ -80,7 +80,7 @@ body {
 }
 .section {
   display: table-cell;
-  height: 100vh;
+  height: -webkit-calc(100% - 0px);
   vertical-align: middle;
   border-top: 1px solid #E0E0E0;
 }
@@ -554,7 +554,10 @@ a.button-style:hover {
   }
 }
 
-@media screen and (max-width: 991px), screen and (max-device-width: 991px) {
+@media screen and (max-width: 991px)
+              and (max-device-width: 991px)
+              and (-webkit-min-device-pixel-ratio: 2)
+{
   .crew {
     .col-md-3 {
       p {
@@ -568,10 +571,13 @@ a.button-style:hover {
   }
 }
 
-@media screen and (max-width: 767px), screen and (max-device-width: 767px)  {
+@media screen and (max-width: 767px)
+              and (max-device-width: 767px)
+              and (-webkit-min-device-pixel-ratio: 2)
+{
   .banner {
     display: none;
-  }
+}
 
   #menu {
     margin-bottom: 50px;
