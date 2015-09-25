@@ -12,6 +12,10 @@ $yellow: #F8EB5F;
 $header-font: "Archivo Narrow",sans-serif;
 $paragraph-font: "Helvetica Neue";
 
+html {
+  min-width: 100%
+}
+
 body {
   font-family: $header-font;
 
@@ -556,7 +560,6 @@ a.button-style:hover {
 
 @media screen and (max-width: 991px)
               and (max-device-width: 991px)
-              and (-webkit-min-device-pixel-ratio: 2)
 {
   .crew {
     .col-md-3 {
@@ -573,7 +576,6 @@ a.button-style:hover {
 
 @media screen and (max-width: 767px)
               and (max-device-width: 767px)
-              and (-webkit-min-device-pixel-ratio: 2)
 {
   .banner {
     display: none;
