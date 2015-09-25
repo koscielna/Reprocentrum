@@ -36,12 +36,14 @@ $(document).ready(function() {
       markers: { maxRandomDistance: null
     }
   });
+
   handler.buildMap({ provider: {
     center:      { lat: 54.35551215, lng: 18.59537959 },
     scrollwheel: false,
     mapTypeId:   google.maps.MapTypeId.ROADMAP,
     styles:      mapStyle,
-    zoom:        15
+    zoom:        15,
+    draggable:   false
   }, internal: {id: 'googleMap'}}, function(){
     markers = handler.addMarkers([
       {
