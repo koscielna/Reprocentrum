@@ -92,6 +92,10 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    dotenv (2.0.2)
+    dotenv-rails (2.0.2)
+      dotenv (= 2.0.2)
+      railties (~> 4.0)
     erubis (2.7.0)
     execjs (2.5.2)
     formtastic (3.1.3)
@@ -236,6 +240,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   colored
   devise (~> 3.4.1)
+  dotenv-rails
   geocode
   gmaps4rails
   haml
@@ -250,3 +255,6 @@ DEPENDENCIES
   sqlite3
   uglifier (>= 1.3.0)
   underscore-rails (~> 1.8.3)
+
+BUNDLED WITH
+   1.10.6
