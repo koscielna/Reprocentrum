@@ -8,6 +8,8 @@ class ContactMessage < ApplicationMailer
 
   def send_message message
     @message = message
-    mail(return_path: @message.email, to: 'repro@reprocentrum.com', subject: @message.topic)
+    mail(reply_to: @message.email,
+         to: 'repro@reprocentrum.com',
+         subject: 'Przekierowanie z reprocentrum.com: ' + @message.topic)
   end
 end
