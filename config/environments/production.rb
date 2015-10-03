@@ -71,15 +71,14 @@ Rails.application.configure do
   config.action_mailer.default :charset => "utf-8"
 
   config.action_mailer.smtp_settings = {
-        address:              "smtp.gmail.com",
-        port:                 587,
-        domain:               "gmail.com",
-        user_name:            "aleksandra.nabozny@gmail.com",
-        password:             ENV['SMTP_PASSWORD'],
-        authentication:       "plain",
-        enable_starttls_auto: true
-  }
-
+      address:              ENV['SMTP_ADDRESS'],
+      port:                 587,
+      domain:               ENV['SMTP_DOMAIN'],
+      user_name:            ENV['SMTP_USER_NAME'],
+      password:             ENV['SMTP_PASSWORD'],
+      authentication:       "plain",
+      enable_starttls_auto: true
+}
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
