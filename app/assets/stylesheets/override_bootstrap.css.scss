@@ -547,6 +547,9 @@ a.button-style:hover {
 
   #yellow  {
     background-color: $yellow;
+    .topic {
+      text-shadow: 1px 0px $dark-grey;
+    }
   }
 
   .block {
