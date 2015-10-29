@@ -20,13 +20,12 @@ $(document).ready ->
     $('html, body').animate { scrollTop: $('#footer').offset().top }, 1000
 
   $(window).scroll ->
-    h = document.getElementById("crew").offsetTop
     y = $(window).scrollTop()
 
-    if y > h
-      $('.back-to-top').fadeIn 'slow'
+    if y > $(window).height()
+      $('.back-to-top img').fadeIn 'slow'
     else
-      $('.back-to-top').fadeOut 'slow'
+      $('.back-to-top img').fadeOut 'slow'
 
   $ ->
     navMain = $('.navbar-collapse')
