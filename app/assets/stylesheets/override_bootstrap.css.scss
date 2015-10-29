@@ -182,7 +182,6 @@ a.button-style.yellow:hover {
 
 .back-to-top {
   position: fixed;
-  display: none;
   z-index: 9;
   width: 32px;
   margin: 0px;
@@ -191,6 +190,7 @@ a.button-style.yellow:hover {
   bottom: 5%;
   img {
     width: 32px;
+    display: none
   }
 }
 .mobile-menu-h {
