@@ -28,7 +28,7 @@ function WHCheckCookies() {
     if(WHReadCookie('cookies_accepted') != 'T') {
         var message_container = document.createElement('div');
         message_container.id = 'cookies-message-container';
-        var html_code = '<div id="cookies-message" style="text-align: center; position: fixed; padding: 10px; align-content: center; background-color: #F9EDED; width: 100%; z-index: 9999">Ta strona używa ciasteczek (cookies), dzięki którym nasz serwis może działać lepiej. <a href="http://wszystkoociasteczkach.pl" target="_blank">Dowiedz się więcej</a><a href="javascript:WHCloseCookiesWindow();" id="accept-cookies-checkbox" name="accept-cookies" style="background-color: #00AFBF; padding: 5px 10px; color: #FFF; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; display: inline-block; margin-left: 10px; text-decoration: none; cursor: pointer;">Rozumiem</a></div>';
+        var html_code = '<div id="cookies-message" style="text-align: center; position: fixed; bottom: 0px; padding: 10px; align-content: center; background-color: #F9EDED; width: 100%; z-index: 9999">Ta strona używa ciasteczek (cookies), dzięki którym nasz serwis może działać lepiej. <a href="http://wszystkoociasteczkach.pl" target="_blank">Dowiedz się więcej</a><a href="javascript:WHCloseCookiesWindow();" id="accept-cookies-checkbox" name="accept-cookies" style="background-color: #00AFBF; padding: 5px 10px; color: #FFF; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; display: inline-block; margin-left: 10px; text-decoration: none; cursor: pointer;">Rozumiem</a></div>';
         message_container.innerHTML = html_code;
         document.body.insertBefore(message_container, document.body.childNodes[0]);
     }
