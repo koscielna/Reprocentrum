@@ -580,9 +580,6 @@ a.button-style:hover {
 @media screen and (max-width: 767px)
               and (max-device-width: 767px)
 {
-  body {
-    font-family: $paragraph-font;
-  }
   .banner, .jcarousel-pagination {
     display: none;
   }
