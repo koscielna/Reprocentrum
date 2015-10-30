@@ -13,3 +13,5 @@ test:
 
 production:
   <<: *default_settings
+  monitor_mode: true
+  app_name: Reprocentrum (Production)
