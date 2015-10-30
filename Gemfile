@@ -24,6 +24,7 @@ gem 'passenger', '~> 5.0.7'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise', '~> 3.4.1'
 gem 'underscore-rails', '~> 1.8.3'
+gem 'newrelic_rpm'
 
 group :doc do
   gem 'sdoc', require: false
