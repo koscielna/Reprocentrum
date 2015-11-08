@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.1'
 
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.4'
 
 group :development do
   gem 'sqlite3'
@@ -13,17 +13,18 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'sass-rails', '~> 4.0.0'
-gem 'bootstrap-sass', '~> 3.3.4'
-gem 'uglifier', '>= 1.3.0'
+gem 'sass-rails', '~> 5.0.4'
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'uglifier', '~> 2.7.2'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.0.5'
 gem 'gmaps4rails'
 gem 'geocode'
-gem 'passenger', '~> 5.0.7'
+gem 'passenger', '~> 5.0.21'
 gem 'activeadmin', github: 'activeadmin'
-gem 'devise', '~> 3.4.1'
+gem 'devise', '~> 3.5.2'
 gem 'underscore-rails', '~> 1.8.3'
+gem 'newrelic_rpm'
 
 group :doc do
   gem 'sdoc', require: false
