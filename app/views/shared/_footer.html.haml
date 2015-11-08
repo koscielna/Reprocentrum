@@ -9,7 +9,7 @@
             = I18n.l(entry.created_at, :locale => 'pl', :format => '%b')
             = entry.created_at.day
 
-          %p.right= entry.body
+          %p.right= raw entry.body
     .col-xs-12.col-md-4.col-sm-4.col-lg-4
       #magenta
         .topic Zaufali nam
