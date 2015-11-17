@@ -15,8 +15,7 @@
         .topic Zaufali nam
         %ul
           - @firms.each do |firm|
-            %li
-              %a{href: firm.url}= firm.name
+            %li= link_to firm.name, firm.url, target: :blank
     .col-xs-12.col-md-4.col-sm-4.col-lg-4
       #yellow
         .topic Kontakt

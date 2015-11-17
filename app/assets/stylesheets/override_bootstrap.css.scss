@@ -104,6 +104,14 @@ body {
   float: left;
 }
 
+#facebook {
+  position: fixed;
+  right: 0;
+  img {
+    width: 40px;
+  }
+}
+
 .cityoffice {
   img {
     width: 70%
