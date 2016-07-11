@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= markerclusterer_packed
 //= require underscore
 //= require gmaps/google
 //= require map-style
