@@ -14,12 +14,12 @@
 ActiveRecord::Schema.define(version: 20151117143023) do
 
   create_table "active_admin_comments", force: :cascade do |t|
-    t.string   "namespace",     limit: 255
+    t.string   "namespace"
     t.text     "body"
-    t.string   "resource_id",   limit: 255, null: false
-    t.string   "resource_type", limit: 255, null: false
+    t.string   "resource_id",   null: false
+    t.string   "resource_type", null: false
     t.integer  "author_id"
-    t.string   "author_type",   limit: 255
+    t.string   "author_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -29,16 +29,16 @@ ActiveRecord::Schema.define(version: 20151117143023) do
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
 
   create_table "admin_users", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                      default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -47,23 +47,23 @@ ActiveRecord::Schema.define(version: 20151117143023) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
   create_table "companies", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "url",        limit: 255
-    t.string   "logo",       limit: 255
+    t.string   "name"
+    t.string   "url"
+    t.string   "logo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string "full_name", limit: 255, null: false
-    t.string "email",     limit: 255, null: false
-    t.string "topic",     limit: 255, null: false
-    t.string "body",      limit: 255, null: false
+    t.string "full_name", null: false
+    t.string "email",     null: false
+    t.string "topic",     null: false
+    t.string "body",      null: false
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "topic",      limit: 255
-    t.string   "body",       limit: 255
+    t.string   "topic"
+    t.string   "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
